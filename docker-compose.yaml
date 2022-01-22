@@ -1,0 +1,17 @@
+version: '3.1'
+
+services:
+
+  cal-tracker:
+    image: cal-tracker:latest
+    restart: always
+    ports:
+      - 3000:3000
+    # volumes:
+    #   - .:.
+    environment:
+      DB_USER: root
+      DB_PASS: example
+      DB_NAME: cal-tracker
+      DB_HOST: mongo
+      DB_PORT: 27017
